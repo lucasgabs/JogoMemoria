@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Jogo da Memória</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Faça Login</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Jogar</button>
+        </form>
+        {% if form.errors %}
+            <div class="error">
+                <p>Erro de login. Tente novamente.</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <footer>
+        <div id="footer_content">
+            <div id="footer_discProf">
+                <p>
+                    <strong>Disciplina:</strong><br>
+                    Programação para Internet
+                </p>
+                <p>
+                    <strong>Professor:</strong><br>
+                    Marcelo Figueiredo Barbosa Júnior
+                </p>
+            </div>
+            <div id="footer_if">
+                <h1>IFRN</h1>
+                <p>Campus Santa Cruz/RN</p>
+            </div>
+            <div id="footer_alunos">
+                <p>Desenvolvido por:</p>
+                <p>Lucas Gabriel da Silva Confessor</p>
+                <p>Maria Fernanda Ribeiro Santos</p>
+                <p>Tiago Leonardo Santos Silva</p>
+            </div>
+        </div>
+        <div id="footer_rights">
+            <p>Todos os direitos reservados ⓒ</p>
+        </div>
+    </footer>
+</body>
+</html>

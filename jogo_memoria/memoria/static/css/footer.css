@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    margin-top: auto;
+}
+
+#footer_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 1rem;
+}
+
+#footer_if {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer_alunos {
+    text-align: right;
+}
+
+#footer_rights {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

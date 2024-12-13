@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+body {
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: brown;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.carta {
+    width: 100px;
+    height: 150px;
+    background-color: burlywood;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.carta:hover {
+    background-color: rgb(196, 149, 88);
+}
+
+.virada {
+    background-color: cornflowerblue;
+    color: blue;
+}
+
+#form-partida {
+    display: none;
+}
